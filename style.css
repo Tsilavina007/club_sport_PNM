@@ -17,9 +17,11 @@
 }
 
 
+
 #responsables {
     height: max-content;
     background-color: white;
+    padding-top: 3rem;
 
 
     .container-title {
@@ -62,7 +64,7 @@
                 height: 25vw;
                 /* background-color: #73ae6978; */
                 border-radius: 30%;
-                border-right: 1px dashed black;                
+                border-right: 2px dotted rgba(0, 0, 0, 0.437);                
             }
 
             .image::after {
@@ -90,11 +92,8 @@
 
         .text {
             width: 50%;
-            /* height: 100%; */
-            /* background-color: #8d565678; */
             display: flex;
             flex-direction: column;
-            /* padding-inline: 2rem; */
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -133,116 +132,26 @@
 @media screen and (width<667px) {
 
     #responsables {
-        height: max-content;
-        background-color: white;
 
-
-        .container-title {
-            padding-top: 2rem;
-            text-align: center;
-            font-size: 1.5rem;
-            color: var(--pcolor1);
-            
-            hr {
-                border: 5px solid var(--pcolor1);
-                border-radius: 2rem;
-                width: 100px;
-                margin: auto;
-                margin-block: 1rem;
-            }
-        }
 
         .container {
-            margin: auto;
-            margin-block: 3rem;
-            padding-block: 3rem 2rem;
-            width: 90%;
-            height: 80%;
-            border-radius: 1rem;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.786);
-            display: flex;
             flex-direction: column;
             align-items: center;
             
 
             .images-info {
                 width: 90%;
-                height: 100%;
-                /* background-color: #40404078; */
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
 
                 .image {
-                    position: relative;
                     width: 70vw;
                     height: 70vw;
-                    /* background-color: #73ae6978; */
-                    border-radius: 30%;
-                    border-right: 1px dashed black;                
                 }
 
-                .image::after {
-                    position: absolute;
-                    top: -1rem;
-                    left: -1rem;
-                    border-radius: 30%;
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    background-image: url(assets/img/responsable.jpg);
-                    background-position: center;
-                    background-size: cover;
-                }
-                h3 {
-                    color: var(--scolor1);
-                    font-size: 2rem;
-                    margin-block:1rem ;
-                }
-                p{
-                    font-size: 1.5rem;
-                }
             }
 
             .text { 
                 margin-top: 3rem;
-                width: 75%;
-                /* height: 100%; */
-                /* background-color: #8d565678; */
-                display: flex;
-                flex-direction: column;
-                /* padding-inline: 2rem; */
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-
-
-
-                p {
-                    position: relative;
-                    font-size: 1.2rem; 
-
-
-                    .quote-left {
-                        position: absolute;
-                        left: -2rem;
-                        top: -2rem;
-                    }
-                    .quote-right {
-                        position: absolute;
-                        right: -2rem;
-                        bottom: -2rem;
-                    }
-                } 
-
-                
-
-                .stars {
-                    margin-top: 3rem;
-                    color: var(--pcolor2);
-                }
-
+                width: 75%;             
             }
         }
     }
@@ -338,7 +247,7 @@ footer {
         }
 
         .contact-container {
-            width: 33vw;
+            width: 30vw;
             .contact {
                 padding: 0.6rem;
             }
@@ -393,9 +302,10 @@ footer {
             }
     
             .contact-container {
+                padding-top: 2rem;
                 width: 100vw;
                 text-align: center;
-                font-size: 0.8rem;
+                font-size: 1rem;
 
                 .contact {
                     padding: 1rem 0;
