@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+
+    
+
+    .logo-PN {
+        height: max-content ;
+        background-color: rgb(50, 49, 49);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4px 10vw;
+
+        .container-title {
+            display: flex;
+            align-items: center;
+
+            .logo {
+                height: 4rem;
+                width: 4rem;
+                border-radius: 50%;
+                border: 1px solid white;
+                background-color: rgb(39, 135, 214);
+                margin-right: 1rem;
+            }
+
+            .title {
+                /* height: 3rem; */
+                /* width: 20rem; */
+                padding: 1rem;
+                border: 1px solid white;
+                color: white;
+                /* background-color: aqua; */
+
+            }
+        }
+
+        .container-icon {
+            color: white;
+            display: flex;
+            height: max-content;
+        
+            .icon {
+                height: max-content;
+                background-color: rgb(70, 68, 67);
+                padding: 0.6rem;
+                border-radius: 50%;
+                margin-inline: 0.5rem;
+                box-shadow: 1px 2px 3px black;
+            }
+            .icon1 {
+                padding: 0.6rem 0.9rem;
+            }
+            .icon2 {
+                padding: 0.6rem 0.7rem;
+            }
+            .icon3 {
+                padding: 0.6rem 0.7rem;
+            }
+            .icon4 {
+                padding: 0.6rem 0.7rem;
+            }
+        }
+    }
+
+
+
+    .info-PN {
+        height: max-content;
+        background-color: rgb(62, 62, 62);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding:1rem 10vw ;
+
+        .about-text {
+            width: 40vw;
+            
+            p{
+                margin-top: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        .contact-container {
+            width: 33vw;
+            .contact {
+                padding: 0.6rem;
+            }
+        }
+    }
+
+    .createdBy {
+        background-color: rgb(50, 49, 49);
+        text-align: center;
+        color: aliceblue;
+        font-size: 0.7rem;
+        padding: 4px;
+    }
+
+}
+
+
+@media screen and (width<667px)  {
+    footer {
+        width: 100vw;
+    
+        .logo-PN {
+            width: 100%;
+            height: max-content ;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem 0vw;
+    
+            .container-title {
+                flex-direction: column;
+    
+                .title {
+                    margin-block: 1rem;
+                    padding: 0.7rem;
+                    font-size: 1rem;
+    
+                }
+            }
+
+        }
+    
+    
+    
+        .info-PN {
+            flex-direction: column;
+            align-items: center;
+            padding:1rem 0;
+    
+            .about-text {
+                width: 96vw;
+                text-align: center;
+            }
+    
+            .contact-container {
+                width: 100vw;
+                text-align: center;
+                font-size: 0.8rem;
+
+                .contact {
+                    padding: 1rem 0;
+                }
+            }
+        }    
+    }
+}
