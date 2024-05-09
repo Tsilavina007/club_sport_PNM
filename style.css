@@ -16,6 +16,113 @@
 
 }
 
+#activite {
+    height: max-content;
+    width: 100%;
+
+    .container-title {
+        text-align: center;
+        width: 70%;
+        margin: auto;
+        h1 {
+            font-size: 2.5rem;
+            padding-block: 2rem;
+            color: var(--pcolor1);
+        }
+        p {
+            font-size: 1.2rem;            
+        }
+    }
+
+    .container-images {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding:3rem 5rem;
+
+        margin: auto;
+
+        .activite-box {
+            width: max-content;
+            /* width:fit-content; */
+            border: 4px solid var(--scolor1);
+            border-radius: 1rem;
+            text-align: center;
+            /* height: max-content; */
+
+            .img {
+                width: 25vw;
+                height: 20vw;
+                margin: 4px;
+                background-size: cover;
+                background-position: center;
+                background-color: #009DE1;
+                border-radius: 0.5rem;
+            }
+            .img1 {
+                background-image: url(assets/img/activite1.jpg);
+            }
+            
+            .img2 {
+                background-image: url(assets/img/activite2.jpg);
+            }
+            
+            .img3 {
+                background-image: url(assets/img/activite3.jpg);
+            }
+            h3 {
+                padding-block: 1rem;
+                font-size: 1.5rem;
+            }
+
+            p {
+                width: 25vw;
+                margin-bottom: 1rem;
+            }
+
+            button {
+                background-color:var(--pcolor2);
+                border: none;
+                font-size: 1rem;
+                font-weight: bolder;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                border-radius: 0.5rem;
+
+            }
+        }
+    }
+}
+
+
+@media screen and (width<667px)  {
+    #activite {
+        .container-title {
+            width: 90%;
+        }
+    
+        .container-images {
+            flex-direction: column;
+            align-items: center;
+            padding:3rem 0rem;
+
+            .activite-box {
+                margin-bottom: 1rem;
+                width: max-content;
+    
+                .img {
+                    width: 80vw;
+                    height: 50vw;
+                }
+    
+                p {
+                    width: 80vw;
+                }
+            }
+        }
+    }
+}
+
 
 #partenaire {
     /* width: 100%; */
@@ -24,7 +131,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding:4rem 2rem;
+    padding:4rem 6rem;
 
     .container-title {
         width: 60%;
@@ -99,10 +206,8 @@
                 font-size: 30px;
                 border-radius: 1rem;
                 box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.497);
-
-                img {
-                    width:;
-                }
+                background-size: cover;
+                background-position: center;
             }
             
             .item1 {
@@ -117,6 +222,31 @@
                 background-color: transparent;
                 box-shadow: none;
 
+            }
+
+            .item1 {
+                background-image: url(assets/img/partenaire1.png);
+            }
+            .item2 {
+                background-image: url(assets/img/partenaire2.jpg);
+            }
+            .item4 {
+                background-image: url(assets/img/partenaire3.jpg);
+            }
+            .item5 {
+                background-image: url(assets/img/partenaire4.jpg);
+            }
+            .item7 {
+                background-image: url(assets/img/partenaire5.jpg);
+            }
+            .item8 {
+                background-image: url(assets/img/partenaire6.jpg);
+            }
+            .item9 {
+                background-image: url(assets/img/partenaire7.jpg);
+            }
+            .item12 {
+                background-image: url(assets/img/partenaire8.jpg);
             }
         } 
 
@@ -167,6 +297,7 @@
     height: max-content;
     background-color: white;
     padding-top: 3rem;
+    /* padding-inline: 4.5rem; */
 
 
     .container-title {
@@ -423,7 +554,10 @@ footer {
     
             .container-title {
                 flex-direction: column;
-    
+                .logo {
+                    width: 30vw;
+                    height: 30vw;
+                }
                 .title {
                     margin-block: 1rem;
                     padding: 0.7rem;
