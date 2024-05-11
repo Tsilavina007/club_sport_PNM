@@ -7,10 +7,26 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/fontawesome-free-6.5.2-web/css/all.css">
     <script src="assets/fontawesome-free-6.5.2-web/js/all.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <header>
+    <header id="home">
+
+        <nav class="navbar">
+            <div class="logo"><img src="assets/img/logo.png" alt="" width="64px" height="64px" ></div>
+            <ul class="menu-nav">
+                <span class="close"><i class="fa fa-close fa-xs"></i></span>
+
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#activite">activities</a></li>
+                <li><a href="#partenaire">partenaire</a></li>
+                <li><a href="#responsables">responsable</a></li>
+            </ul>
+            <button class="menu-bar"><i class="fa fa-bars fa-xl" aria-hidden="true"></i></button>
+
+        </nav>
         <div class="container-title">
             <h1>PRACTICE <br>
                 MAKE <br>
@@ -26,7 +42,7 @@
         </div>
     </header>
 
-    <section id="about">
+    <section id="about" class="animation">
         <div class="container-images">
             <div class="img1"></div>
             <div class="img2"></div>
@@ -55,7 +71,7 @@
         </div>
     </section>
 
-    <section id="activite">
+    <section id="activite" class="animation">
         <div class="container-title">
             <h1>Les différents activités</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -83,7 +99,7 @@
         </div>
     </section>
 
-    <section id="partenaire">
+    <section id="partenaire" class="animation">
         <div class="container-title">
             <h4>Partenaires</h4>
             <h1>The standard <br> Lorem Ipsum <br>passage</h1>
@@ -120,7 +136,7 @@
     </section>
 
 
-    <section id="responsables">
+    <section id="responsables" class="animation">
         <div class="container-title">
             <h1>LES PENSÉS DE NOS RÉSPONSABLES</h1>
             <hr>    
