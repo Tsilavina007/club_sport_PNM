@@ -123,7 +123,7 @@ function changeImage() {
 
 function resetInterval() {
     clearInterval(interval)
-    interval = setInterval(run, 4000)
+    interval = setInterval(run, 10000)
 }
 
 rightBtn.addEventListener('click', () => {
