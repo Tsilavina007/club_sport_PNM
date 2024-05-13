@@ -93,3 +93,47 @@ for (let i = 0; i < the_animation.length; i++) {
     const elements = the_animation[i];
     observer.observe(elements);
 }
+
+
+
+const slides = document.getElementById('slides')
+const leftBtn = document.getElementById('left')
+const rightBtn = document.getElementById('right')
+
+const slide = document.querySelectorAll('#slides .slide')
+
+let idx = 0
+
+let interval = setInterval(run, 9000)
+
+function run() {
+    idx++
+    changeImage()
+}
+
+function changeImage() {
+    if(idx > slide.length - 1) {
+        idx = 0
+    } else if(idx < 0) {
+        idx = slide.length - 1
+    }
+
+    slides.style.transform = `translateX(${-idx * 100}vw)`
+}
+
+function resetInterval() {
+    clearInterval(interval)
+    interval = setInterval(run, 4000)
+}
+
+rightBtn.addEventListener('click', () => {
+    idx++
+    changeImage()
+    resetInterval()
+})
+
+leftBtn.addEventListener('click', () => {
+    idx--
+    changeImage()
+    resetInterval()
+})
