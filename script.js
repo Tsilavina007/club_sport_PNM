@@ -104,7 +104,7 @@ const slide = document.querySelectorAll('#slides .slide')
 
 let idx = 0
 
-let interval = setInterval(run, 9000)
+let interval = setInterval(run, 10000)
 
 function run() {
     idx++
