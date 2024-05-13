@@ -23,12 +23,16 @@ window.addEventListener('scroll', () => {
     if(document.documentElement.scrollTop > 100) {
         navbar.classList.add('changed')
         navbar.classList.remove('changed2')
-
     } else {
         navbar.classList.add('changed2')
         navbar.classList.remove('changed')
     }
 })
+
+
+
+
+
 
 const toScroll = (link, targetSection) => {
     link.addEventListener('click', function(event) {
