@@ -8,24 +8,40 @@
     <link rel="stylesheet" href="rejoindre.css">
 </head>
 <body>
+    <div class="container-images">
+        <div class="img"><img src="/assets/img/logo.png" alt=""></div>
+    </div>
     <!-- Contenu de la page avec le formulaire -->
-    <div class="container-form">
-        <h2>Formulaire de Rejoindre</h2>
-        <form action="#" method="post">
-            <div class="form-group">
-                <label for="nom">Nom:</label>
-                <input type="text" id="nom" name="nom" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit">Envoyer</button>
+    <div class="container">
+        <h1>Rejoinez Nous !</h1>
+        <form>
+        <div class="form-control">
+            <input type="text" id="nom" required />
+            <label>Nom</label>
+        </div>
+        <div class="form-control">
+            <input type="text" id="prenom" required />
+            <label>Prenom</label>
+        </div>
+        <div class="form-control">
+            <input type="text" id="email" required />
+            <label>Email</label>
+        </div>
+
+        <button class="btn">Envoyer</button>
+
+        <p class="text">Pour retourner a la page d'accueil !<a href="index.html"> cliquez ici</a></p>
         </form>
     </div>
 </body>
+<script>
+    const labels = document.querySelectorAll('.form-control label');
+
+    labels.forEach((label) => {
+    label.innerHTML = label.innerText
+        .split('')
+        .map((letter, index) => `<span style="transition-delay: ${index * 40}ms">${letter}</span>`)
+        .join('');
+    });
+</script>
 </html>

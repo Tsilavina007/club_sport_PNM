@@ -54,7 +54,7 @@
     to {top: 3vh;
         background-color: var(--pcolor1);;
         width: 95%;
-        left: 2.5vw;
+        left: 2.5vw;  
         border-radius: 2rem;}
 }
 
@@ -81,11 +81,13 @@
 
 
 header {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     height: max-content;
+    background-color: transparent;
 
     nav{
         position: fixed;
@@ -129,12 +131,14 @@ header {
 
             li {
                 list-style: none;
-                margin: 1rem 2vw;
+                margin: 1rem 1.5vw;
 
                 a {
                     text-decoration: none;
                     color: white;
                     font-weight: bolder;
+                    font-size: 1rem;
+                    padding-bottom: 0.5rem;
                 }
 
                 a:hover,
@@ -178,13 +182,15 @@ header {
 
     .container-title {
         padding-left: 4rem;
-        padding-top: 7rem;
+        padding-top: 9rem;
         padding-bottom: 3rem;
         width: 30%;
         height: 100%;
 
+
         h1 {
             font-size: 3rem;
+            
         }
 
         p {
@@ -194,7 +200,7 @@ header {
     }
 
     .container-images {
-        padding-block: 7rem 2rem;
+        padding-block: 7rem;
 
         width: 50%;
         background-color: var(--pcolor1);
@@ -211,13 +217,25 @@ header {
             width: 30vw;
             height: 25vw;
             border-radius: 0;
-            background-image: url(assets/img/logo1.jpg);
             background-size: contain;
             /* background-size: contain; */
             background-position: center;
         }
     }
 }
+
+.img img {
+    width: 100%;
+    animation-name: uptodown;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+@keyframes uptodown {
+    from {transform: translateY(0);}
+    to {transform: translateY(-2vh);}
+}
+
 
 
 @media screen and (width<800px) {
@@ -310,6 +328,7 @@ header {
         }
     
         .container-images {
+            padding-bottom: 4rem;
             width: 100%;
     
             .img {
@@ -380,6 +399,12 @@ header {
             background-color: var(--pcolor1);
             border: none;
             border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.04);
         }
     }
 }
@@ -426,7 +451,7 @@ header {
             color: var(--pcolor2);
         }
         p {
-            font-size: 1.2rem;            
+            font-size: 1.1rem;            
         }
     }
 
@@ -455,7 +480,7 @@ header {
                 border-radius: 0.5rem;
             }
             .img:hover {
-                background-size: 125%;
+                background-size: 110%;
             }
             .img1 {
                 background-image: url(assets/img/activite1.jpg);
@@ -470,7 +495,7 @@ header {
             }
             h3 {
                 padding-block: 1rem;
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
 
             p {
@@ -482,7 +507,7 @@ header {
                 background-color:var(--pcolor2);
                 border: none;
                 font-size: 1rem;
-                font-weight: bolder;
+                font-weight: 600;
                 padding: 1rem;
                 margin-bottom: 1rem;
                 border-radius: 0.5rem;
@@ -490,7 +515,8 @@ header {
 
             button:hover {
                 cursor: pointer;
-                opacity: 0.9;
+                background-color: #f38c25;
+                /* opacity: 0.9; */
             }
         }
         .activite-box:hover {
@@ -535,6 +561,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding:4rem 6rem;
+    overflow: hidden;
 
     .container-title {
         width: 60%;
@@ -650,7 +677,28 @@ header {
 
     }
 }
+#partenaire::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background-image: url(/assets/img/headerBackgroud.png);
+    background-size: contain;
+    filter: invert(30%);
 
+    animation-name: bgTurn;
+    animation-iteration-count: infinite;
+    animation-duration: 120s;
+    /* animation-direction: alternate; */
+}
+
+@keyframes bgTurn {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+}
 
 @media screen and (width<667px) {
     #partenaire {
@@ -703,7 +751,6 @@ header {
     
     .carousel {
         position: relative;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         height: max-content;
         width: 100%;
         overflow: hidden;
@@ -811,12 +858,13 @@ header {
                 background-image: url(assets/img/responsable3.jpg);
             }
             h3 {
+                text-align: center;
                 color: var(--scolor1);
-                font-size: 2rem;
+                font-size: 1.5rem;
                 margin-block:1rem ;
             }
             p{
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 text-align: center;
             }
         }

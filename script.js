@@ -4,7 +4,7 @@ const navMenu = document.querySelector(".menu-nav");
 const close = document.querySelector(".close");
 
 
-
+// partie 1
 menu.addEventListener("click", () => {
     navMenu.classList.add("show")
     navMenu.classList.remove("hide")
@@ -19,6 +19,7 @@ close.addEventListener("click", () => {
 
 
 
+// partie 2
 window.addEventListener('scroll', () => {
     if(document.documentElement.scrollTop > 100) {
         navbar.classList.add('changed')
@@ -31,30 +32,36 @@ window.addEventListener('scroll', () => {
 
 
 
+
+// partie 3
 window.addEventListener('scroll', function() {
-  var sections = document.querySelectorAll('section');
-  var navLinks = document.querySelectorAll('nav a');
-
-
-  sections.forEach(function(section, index) {
-    var navLink = navLinks[index + 1];
-    var sectionTop = section.offsetTop;
-    var sectionBottom = sectionTop + section.offsetHeight;
-
-    if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
-      navLink.style.color = 'var(--pcolor2)'; // Change color of current section link
-    } else {
-      navLink.style.color = '#fff'; // Reset color if not scrolled to section
+    var sections = document.querySelectorAll('section');
+    var navLinks = document.querySelectorAll('nav a');
+    if (navLinks.length >2) {
+        sections.forEach(function(section, index) {
+            var navLink = navLinks[index + 1];
+            var sectionTop = section.offsetTop;
+            var sectionBottom = sectionTop + section.offsetHeight;
+    
+            if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+            navLink.style.color = 'var(--pcolor2)'; // Change color of current section link
+            navLink.style.borderBottom = '3px solid var(--pcolor2)'
+            } else {
+            navLink.style.color = '#fff'; // Reset color if not scrolled to section
+            navLink.style.borderBottom = 'none'
+    
+            }
+        });
     }
-  });
+
 });
 
 const rejoindreLink = document.querySelector('a[href="rejoindre.html"]');
+const membresLink = document.querySelector('a[href="membres.html"]');
+const indexLink = document.querySelector('a[href="index.html"]');
 
 document.querySelectorAll('nav a').forEach(function(link) {
-    if (link == rejoindreLink) {
-        console.log('ok');
-    } else {  
+    if (link != rejoindreLink && link != membresLink && link != indexLink) {  
         link.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default link behavior
         var targetId = this.getAttribute('href');
@@ -73,45 +80,11 @@ document.querySelectorAll('nav a').forEach(function(link) {
 
 
 
-// const toScroll = (link, targetSection) => {
-//     link.addEventListener('click', function(event) {
-//         event.preventDefault(); 
-//         var targetPosition = targetSection.offsetTop;
-
-//         window.scrollTo({
-//             top: targetPosition,
-//             behavior: 'smooth'
-//         });
-//     });
-// }
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     var homeLink = document.querySelector('a[href="#home"]');
-//     var hometargetSection = document.getElementById('home');
-
-//     var aboutLink = document.querySelector('a[href="#about"]');
-//     var abouttargetSection = document.getElementById('about');
-
-//     var activiteLink = document.querySelector('a[href="#activite"]');
-//     var activitetargetSection = document.getElementById('activite');
-
-//     var partenaireLink = document.querySelector('a[href="#partenaire"]');
-//     var partenairetargetSection = document.getElementById('partenaire');
-
-//     var responsablesLink = document.querySelector('a[href="#responsables"]');
-//     var responsablestargetSection = document.getElementById('responsables');
 
 
-//     toScroll(homeLink, hometargetSection);
-//     toScroll(aboutLink, abouttargetSection);
-//     toScroll(activiteLink, activitetargetSection);
-//     toScroll(partenaireLink, partenairetargetSection);
-//     toScroll(responsablesLink, responsablestargetSection);
-
-// });
-
-
+// partie 4
 const the_animation = document.querySelectorAll('.animation') //
 
 const observer = new IntersectionObserver((entries) => {
@@ -127,7 +100,6 @@ const observer = new IntersectionObserver((entries) => {
 { threshold: 0.5
 });
 
-
 for (let i = 0; i < the_animation.length; i++) {
     const elements = the_animation[i];
     observer.observe(elements);
@@ -135,6 +107,8 @@ for (let i = 0; i < the_animation.length; i++) {
 
 
 
+
+// partie 5
 const slides = document.getElementById('slides')
 const leftBtn = document.getElementById('left')
 const rightBtn = document.getElementById('right')
