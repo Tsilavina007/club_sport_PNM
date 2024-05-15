@@ -1,0 +1,67 @@
+/* style.css */
+
+/* Couleurs personnalisées */
+:root {
+    --pcolor1: #22BBEA;
+    --pcolor2: #FF9933;
+  
+    --scolor1: #009DE1;
+    --scolor2: #CC6600;
+    --scolor3: #404040;
+  }
+  
+  /* Styles pour le formulaire */
+  .container-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--pcolor1); /* Couleur de fond */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .container-form h2 {
+    color: var(--pcolor2); /* Couleur du texte */
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--scolor1); /* Couleur du texte des labels */
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--scolor2); /* Couleur de la bordure */
+    border-radius: 5px;
+    background-color: var(--scolor3); /* Couleur de fond des champs */
+    color: #fff; /* Couleur du texte dans les champs */
+  }
+  
+  .form-group textarea {
+    height: 100px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: var(--scolor1); /* Couleur de fond du bouton */
+    border: none;
+    border-radius: 5px;
+    color: #fff; /* Couleur du texte du bouton */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: var(--scolor2); /* Couleur de fond du bouton au survol */
+  }
+  

@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Open Sans', 'lato';
 }
 
 
@@ -124,6 +124,7 @@ header {
             /* float: right; */
             height: max-content;
             width: max-content;
+            align-items: center;
             /* background-color: #40404036; */
 
             li {
@@ -133,12 +134,30 @@ header {
                 a {
                     text-decoration: none;
                     color: white;
+                    font-weight: bolder;
                 }
 
+                a:hover,
+                a:focus {
+                    color: var(--pcolor2);
+                }
+
+            }
+            .nousRejoindre {
+                background-color: var(--pcolor2);
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                transition: all 0.3s ease-in-out;
+                a:focus,
                 a:hover {
-                    font-weight: bold;
+                    /* font-weight: bolder; */
+                    color: white;
                 }
             }
+            .nousRejoindre:hover {
+                transform: scale(1.05);
+            }
+
 
             .close {
                 position: absolute;
@@ -165,11 +184,11 @@ header {
         height: 100%;
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
 
         p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             padding-block: 1rem;
         }
     }
@@ -190,10 +209,11 @@ header {
         .img {
             
             width: 30vw;
-            height: 30vw;
-            border-radius: 50%;
+            height: 25vw;
+            border-radius: 0;
             background-image: url(assets/img/logo1.jpg);
-            background-size: cover;
+            background-size: contain;
+            /* background-size: contain; */
             background-position: center;
         }
     }
@@ -294,7 +314,7 @@ header {
     
             .img {
                 width: 80vw;
-                height: 80vw;
+                height: 70vw;
             }
         }
     }
@@ -350,7 +370,7 @@ header {
         }
         
         p {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         button {
@@ -420,9 +440,10 @@ header {
 
         .activite-box {
             width: max-content;
-            border: 0.4rem solid var(--pcolor1);
+            border: 0.2rem solid var(--pcolor1);
             border-radius: 1rem;
             text-align: center;
+            transition: all 0.4s ease-in-out;
 
             .img {
                 width: 25vw;
@@ -432,6 +453,9 @@ header {
                 background-position: center;
                 background-color: #009DE1;
                 border-radius: 0.5rem;
+            }
+            .img:hover {
+                background-size: 125%;
             }
             .img1 {
                 background-image: url(assets/img/activite1.jpg);
@@ -462,8 +486,15 @@ header {
                 padding: 1rem;
                 margin-bottom: 1rem;
                 border-radius: 0.5rem;
-
             }
+
+            button:hover {
+                cursor: pointer;
+                opacity: 0.9;
+            }
+        }
+        .activite-box:hover {
+            transform: scale(1.02);
         }
     }
 }
@@ -592,28 +623,28 @@ header {
             }
 
             .item1 {
-                background-image: url(assets/img/partenaire1.png);
+                background-image: url(assets/img/partenaire2.png);
             }
             .item2 {
-                background-image: url(assets/img/partenaire2.jpg);
+                background-image: url(assets/img/partenaire1.png);
             }
             .item4 {
-                background-image: url(assets/img/partenaire3.jpg);
+                background-image: url(assets/img/partenaire3.png);
             }
             .item5 {
-                background-image: url(assets/img/partenaire4.jpg);
+                background-image: url(assets/img/partenaire4.png);
             }
             .item7 {
-                background-image: url(assets/img/partenaire5.jpg);
+                background-image: url(assets/img/partenaire5.png);
             }
             .item8 {
-                background-image: url(assets/img/partenaire6.jpg);
+                background-image: url(assets/img/partenaire6.png);
             }
             .item9 {
-                background-image: url(assets/img/partenaire7.jpg);
+                background-image: url(assets/img/partenaire7.png);
             }
             .item12 {
-                background-image: url(assets/img/partenaire8.jpg);
+                background-image: url(assets/img/partenaire8.png);
             }
         } 
 
@@ -736,7 +767,7 @@ header {
         margin: auto;
         margin-block: 3rem;
         padding-block: 3rem 2rem;
-        width: 90%;
+        width: 85%;
         height: 80%;
         border-radius: 1rem;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.786);
@@ -766,9 +797,18 @@ header {
                 content: '';
                 width: 100%;
                 height: 100%;
-                background-image: url(assets/img/responsable.jpg);
                 background-position: center;
                 background-size: cover;
+            }
+
+            .img1::after {
+                background-image: url(assets/img/responsable1.jpg);
+            }
+            .img2::after {
+                background-image: url(assets/img/responsable2.jpg);
+            }
+            .img3::after {
+                background-image: url(assets/img/responsable3.jpg);
             }
             h3 {
                 color: var(--scolor1);
@@ -858,7 +898,7 @@ footer {
                 height: 4rem;
                 width: 4rem ;
                 border-radius: 4px;
-                border: 1px solid white;
+                /* border: 1px solid white; */
                 background-image: url(assets/img/logo.png);
                 background-size: cover;
                 background-position: center;

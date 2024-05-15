@@ -31,46 +31,85 @@ window.addEventListener('scroll', () => {
 
 
 
+window.addEventListener('scroll', function() {
+  var sections = document.querySelectorAll('section');
+  var navLinks = document.querySelectorAll('nav a');
 
 
+  sections.forEach(function(section, index) {
+    var navLink = navLinks[index + 1];
+    var sectionTop = section.offsetTop;
+    var sectionBottom = sectionTop + section.offsetHeight;
 
-const toScroll = (link, targetSection) => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault(); 
-        var targetPosition = targetSection.offsetTop;
+    if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+      navLink.style.color = 'var(--pcolor2)'; // Change color of current section link
+    } else {
+      navLink.style.color = '#fff'; // Reset color if not scrolled to section
+    }
+  });
+});
 
+const rejoindreLink = document.querySelector('a[href="rejoindre.html"]');
+
+document.querySelectorAll('nav a').forEach(function(link) {
+    if (link == rejoindreLink) {
+        console.log('ok');
+    } else {  
+        link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        var targetId = this.getAttribute('href');
+        var targetSection = document.querySelector(targetId);
+        var targetSectionTop = targetSection.offsetTop;
+    
+        // Scroll to the top of the target section smoothly
         window.scrollTo({
-            top: targetPosition,
+            top: targetSectionTop,
             behavior: 'smooth'
         });
-    });
-}
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    var homeLink = document.querySelector('a[href="#home"]');
-    var hometargetSection = document.getElementById('home');
-
-    var aboutLink = document.querySelector('a[href="#about"]');
-    var abouttargetSection = document.getElementById('about');
-
-    var activiteLink = document.querySelector('a[href="#activite"]');
-    var activitetargetSection = document.getElementById('activite');
-
-    var partenaireLink = document.querySelector('a[href="#partenaire"]');
-    var partenairetargetSection = document.getElementById('partenaire');
-
-    var responsablesLink = document.querySelector('a[href="#responsables"]');
-    var responsablestargetSection = document.getElementById('responsables');
-
-
-    toScroll(homeLink, hometargetSection);
-    toScroll(aboutLink, abouttargetSection);
-    toScroll(activiteLink, activitetargetSection);
-    toScroll(partenaireLink, partenairetargetSection);
-    toScroll(responsablesLink, responsablestargetSection);
-
+        });
+    }
 });
+
+
+
+
+// const toScroll = (link, targetSection) => {
+//     link.addEventListener('click', function(event) {
+//         event.preventDefault(); 
+//         var targetPosition = targetSection.offsetTop;
+
+//         window.scrollTo({
+//             top: targetPosition,
+//             behavior: 'smooth'
+//         });
+//     });
+// }
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     var homeLink = document.querySelector('a[href="#home"]');
+//     var hometargetSection = document.getElementById('home');
+
+//     var aboutLink = document.querySelector('a[href="#about"]');
+//     var abouttargetSection = document.getElementById('about');
+
+//     var activiteLink = document.querySelector('a[href="#activite"]');
+//     var activitetargetSection = document.getElementById('activite');
+
+//     var partenaireLink = document.querySelector('a[href="#partenaire"]');
+//     var partenairetargetSection = document.getElementById('partenaire');
+
+//     var responsablesLink = document.querySelector('a[href="#responsables"]');
+//     var responsablestargetSection = document.getElementById('responsables');
+
+
+//     toScroll(homeLink, hometargetSection);
+//     toScroll(aboutLink, abouttargetSection);
+//     toScroll(activiteLink, activitetargetSection);
+//     toScroll(partenaireLink, partenairetargetSection);
+//     toScroll(responsablesLink, responsablestargetSection);
+
+// });
 
 
 const the_animation = document.querySelectorAll('.animation') //
